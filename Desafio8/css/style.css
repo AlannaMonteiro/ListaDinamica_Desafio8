@@ -100,7 +100,7 @@ li p {
     margin: 0;
 }
 
-.completed p {
+li p.completed {
     text-decoration: line-through;
      
 }
