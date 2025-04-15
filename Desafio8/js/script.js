@@ -123,15 +123,14 @@ document.addEventListener("DOMContentLoaded", function () {
   
 
 
-// sublinhado (fail ainda)
-document.querySelectorAll('.btn-checkbox').forEach((checkbox) => {
-    checkbox.addEventListener('change', function () {
-        const button = this.closest('p');
-        if (this.checked) {
-            button.classList.add('completed');
-        } else {
-            button.classList.remove('completed');
-        }
-    });
+// sublinhado 
+checkbox.addEventListener("change", function () {
+  if (checkbox.checked) {
+    li.classList.add("completed"); 
+    tarefas[index].concluida = true;
+  } else {
+    li.classList.remove("completed"); 
+    tarefas[index].concluida = false;
+  }
+  salvarTarefas();
 });
-;
